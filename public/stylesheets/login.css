@@ -1,0 +1,24 @@
+.big{
+    width: 416px;
+    height: 310px;
+    margin: 47px 200px 200px 90px;
+    border: 4px solid #786940;
+    border-radius: 20px;
+}
+.distance_2{
+    margin-left: 16px;
+}
+.inner{
+    display: inline-block;
+    margin: 85px 97px;
+}
+.inner_1{
+    margin-bottom: 17px;
+}
+.inner_2{
+    margin-bottom: 13px;
+}
+.inner_3{
+    display: inline-block;
+    margin-left: 83px;
+}

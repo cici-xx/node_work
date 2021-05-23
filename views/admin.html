@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/login.css" />
+    
+    <script src="/javascripts/jquery-3.6.0.js" > </script>
+</head>
+<body>
+    <div>
+        <span style="font-size: 100px;font-style: italic;margin-left: 349px;">Adminstrator</span>
+    </div>
+    <div class="big" style="margin: 47px 200px 200px 399px;">
+        <div class="inner">
+            <div class="inner_1">
+                <span>用户名</span>
+                <input id="name" style="outline-color: #0097a7;"  class="distance_1" type="text" name="username" placeholder="用户名"/>
+            </div>
+            <br/>
+            <div class="inner_2">
+                <span >密码</span>
+                <input id="password" style="outline-color: #0097a7;"  class="distance_2" type="password" name="pass" placeholder="密码"/>
+            </div>
+            <br>
+            <div class="inner_3">
+                <a id="login" style="padding: 7px 13px;border-radius: 7px;color: #f5f7f7;background-color:#786940;border: 3px solid #786940; text-decoration: none;">登录</a>
+                <br>
+                <br>
+                <a href="/admin_" target="_blank" style="padding-left: 67px; text-decoration: none;color:#786940;">立即注册?</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#login').click(function(){
+            $.ajax({
+                type:"post",
+                url:"/admin/admin",
+                data:{"name":$("#name").val(),"password":$("#password").val()},
+                success:function(data){
+                    if(data.status==1){
+                        window.location.href ="/admin_content"
+                    }else
+                    {
+                        alert('用户名或密码输入错误！')
+                    }
+                    
+                }
+            })
+
+        })
+        </script>
+</body>
+</html>

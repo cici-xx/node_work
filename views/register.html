@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="stylesheets/register.css" />
+
+    <script src="/javascripts/jquery-3.6.0.js"></script>
+</head>
+<body style="background-color: aliceblue; background-image: url(images/c.jpg);">
+    
+    <form action="/register"  method="POST">
+        <div class="frame">
+            <div>
+                <span>用户名</span>
+                <input id="username" style="outline-color: #0097a7;" class="inner_1" type="text" name="username" placeholder="用户名"/>
+            </div>
+            <br/>
+            <div>
+                <span >密码</span>
+                <input id="password" style="outline-color: #0097a7;"  class="inner_2" type="password" name="pass" placeholder="密码"/>
+            </div>
+            <br>
+            <div>
+                <span style="color: red;">确认密码</span>
+                <input id="repeatPassword" style="outline-color: #0097a7 ;"  type="password" name="pass1" placeholder="密码"/>
+            </div>
+            <br>
+            <div>
+                <span>别名</span>
+                <input id="realname" style="outline-color: #0097a7;"  class="inner_3" type="text" placeholder="别名"/>
+            </div>
+            <br>
+            <div>
+                <span>手机号码</span>
+                <input style="outline-color: #0097a7;" id="phone" type="text" placeholder="手机号码"/>
+            </div>
+            <br>
+            <div>
+                <span>邮箱</span>
+                <input id="email" style="outline-color: #0097a7;" class="inner_4" type="text" placeholder="邮箱"/>
+            </div>
+            <br>
+            <div>
+                <span>性别</span>
+                <input style="outline-color: #0097a7;"  class="inner_5" type="text" placeholder="性别"/>
+            </div>
+            <br>
+            <div>
+                <span>所属班级</span>
+                <input style="outline-color: #0097a7;"  type="text" placeholder="所属班级"/>
+            </div>
+            <br>
+            <div>
+                <span>爱好</span>
+                <input style="outline-color: #0097a7;"  class="inner_5" type="text" placeholder="爱好"/>
+            </div>
+            <div class="btn">
+                <input id="btn" type="submit" value="注册" style="padding: 7px 13px;border-radius: 7px;color: #f5f7f7;background-color: #786940;border: 3px solid #786940;" />    
+            </div>
+        </div>
+    </form>
+    <script src="/javascripts/register.js"></script>
+</body>
+</html>

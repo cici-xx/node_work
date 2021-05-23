@@ -1,0 +1,36 @@
+form{
+    width: 416px;
+    height: 470px;    
+    border: 4px solid #f3e5f54a; 
+    margin: 65px 200px 200px 90px;
+    border: 4px solid #786940;
+    border-radius: 20px;
+    
+}
+.frame{
+    margin: 23px 86px;
+}
+.inner_1{
+    margin-left: 16px;
+}
+.inner_2{
+    margin-left: 32px;
+}
+.inner_3{
+    margin-left: 32px;
+}
+.inner_4{
+    margin-left: 32px;
+}
+.inner_5{
+    margin-left: 32px;
+}
+.btn{
+    margin-left: 91px;
+    margin-top: 26px;
+}
+.control-label{
+    font-size: 13px;
+    margin-left: 79px;
+    color: #c11f13;
+}

@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="/stylesheets/css2/bootstrap.css">
     <script src="/javascripts/jquery-3.6.0.js" > </script>
     <script src="/javascripts/js2/bootstrap.js"></script>
+    <link rel="stylesheet" href="/stylesheets/Table.css">
+    
 </head>
 <body>
+    <!-- 头部 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/admin_content">首页</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,16 +28,35 @@
               <a class="nav-link" href="/bookmanagement">图书管理</a>
               <li><a class="nav-link" href="/advise">意见管理</a></li>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-            </li>
+            
           </ul>
         </div>
       </nav>
-      <div>
-        <span style="font-size: 100px;font-style: italic;">
-          Welcome!
-        </span>
-      </div>
+</div>
+<br>
+<div>
+    <span style="font-size: 2.5rem;margin-left: 165px;">意见反馈</span>
+</div>
+<div style="margin-left: 165px;margin-top: 25px;">
+  <table class="tables">
+    <thead>
+        <tr>
+            <td>编号</td>
+            <td>意见</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody id="advise">
+
+    </tbody>
+    <script src="/javascripts/advise.js"></script>
+</table>
+</div>
+
+
+
+
+
+
 </body>
 </html>

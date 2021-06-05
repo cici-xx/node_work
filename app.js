@@ -20,6 +20,10 @@ var searchRouter = require('./routes/search');
 var adminRouter = require('./routes/admin');
 var admin_Router = require('./routes/admin_');
 var admin_contentRouter = require('./routes/admin_content');
+var bookmanagementRouter = require('./routes/bookmanagement');
+var alterRouter = require('./routes/bookmanagement');
+var updateRouter = require('./routes/bookmanagement');
+var adviseRouter = require('./routes/advise');
 
 
 
@@ -54,6 +58,10 @@ app.use('/search',searchRouter);
 app.use('/admin',adminRouter);
 app.use('/admin_',admin_Router);
 app.use('/admin_content',admin_contentRouter);
+app.use('/bookmanagement',bookmanagementRouter);
+app.use('/alter',alterRouter);
+app.use('/update',updateRouter);
+app.use('/advise',adviseRouter);
 
 
 

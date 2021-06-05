@@ -47,15 +47,15 @@
       </div>
       <div class="modal-body">
         
-        <form>
+        <div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="请输入您的意见" id="recipient-name">
+            <input type="text" class="form-control" placeholder="请输入您的意见" name="advise" id="recipient-name">
           </div>
-        </form>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="ok">ok</button>
+        <button type="button" class="btn btn-primary" id="ok" >ok</button>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
             <a class="dropdown-item" href="/mybookrack">我的书架</a>
             <a class="dropdown-item" href="/account">账号设置</a>
             <!-- <a class="dropdown-item" href="/upload">上传文件</a> -->
-            <a class="dropdown-item" href="/exit">退出登录</a>
+            <a class="dropdown-item" href="/login">退出登录</a>
           </div>
         </li>
       </ul>
@@ -114,43 +114,33 @@
     </nav>
 
 
-    <div class="card-deck">
-      <div class="card">
-        <img src="/images/6.jpg" style="width: 18rem;" class="card-img-top" alt="...">
+    <div class="card-deck" id="card-deck">
+    </div>
+</body>
+<script src="/javascripts/advise.js"></script>
+</html>
+<script>
+  $.ajax({
+    type:"GET",
+    url :"/content/show",
+    success:function(data){
+      for (const i in data) {
+        $("#card-deck").append(`
+        
+        <div class="card">
+        <img src=${data[i].bimg} style="width: 18rem;" class="card-img-top" alt="...">
         <div class="card-body">
-          <a class="card-title" href="/detail" style="color: black;">《活着》——余华</a>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/7.jpg" style="width: 18rem;" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">《摆渡人》——克莱儿.麦克福尔</h5>
-          <p class="card-text">克莱儿.麦克福尔所著的《摆渡人》是一个史诗般动人的故事，它令人激奋、恐惧、温暖、回归人性、引人深思。</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/images/8.jpg" style="width: 18rem;" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">《撒哈拉的故事》——三毛</h5>
+          <h5 class="card-title">${data[i].bname}</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
         </div>
         <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
         </div>
       </div>
-    </div>
-</body>
-</html>
+        `)
+      }
 
-<script>
-  $("#ok").click(function(){
-    alert("感谢您宝贵的意见！")
+    }
   })
 </script>
+

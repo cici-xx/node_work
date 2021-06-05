@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/css2/bootstrap.css">
+    <script src="/javascripts/jquery-3.6.0.js" > </script>
+    <script src="/javascripts/js2/bootstrap.js"></script>
+    <link rel="stylesheet" href="/stylesheets/Table.css">
+    
+</head>
+<body>
+    <!-- 头部 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/admin_content">首页</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">借阅管理</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bookmanagement">图书管理</a>
+              <li><a class="nav-link" href="/advise">意见管理</a></li>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+      <!-- 添加图书信息 -->
+<div style="margin-left: 485px;margin-top: 43px;">
+    <h1>图书管理</h1>
+    <span>请输入编号：</span>
+    <input type="number" name="bid" id="bid">
+    <br>
+    <span>请输入书名：</span>
+    <input type="text" name="bname" id="bname">
+    <br>
+    <span>请输入作者：</span>
+    <input type="text" name="bwriter" id="bwriter">
+    <br>
+    <span>请输入库存：</span>
+    <input type="number" name="bstock" id="bstock">
+    <br>
+    <span>请输入图片：</span>
+    <input type="text" name="bimg" id="bimg">
+    <br>
+    <button style="margin-left: 142px;margin-top: 22px;" id="bookAdd">添加</button>
+    <!-- 搜索 -->
+    
+      <input type="text" name="bsearch" id="bsearch1" style="position: relative;margin-left: 288px;top: -223px;">
+      <button style="position: relative;margin-left: 672px;top: -251px;" id="bsearch">搜索</button>
+    
+    
+    
+
+</div>
+<br>
+<div style="margin-left: 165px;margin-top: 25px;">
+  <table class="tables">
+    <thead>
+        <tr>
+            <td>编号</td>
+            <td>书名</td>
+            <td>作者</td>
+            <td>库存</td>
+            <td>图片</td>
+            <td>操作</td>
+        </tr>
+    </thead>
+    <tbody id="Book">
+
+    </tbody>
+    <script src="/javascripts/bookmanagement.js"></script>
+</table>
+</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -18,11 +18,25 @@ router.post('/content',(req,res) =>{
     var query = "select * from tab_advise ";
     connection.query(query,(err,results,fields)=>{
       if(err){
-        console.log(err);
+        console.log(err); 
         return;
       }
       res.json(results);
     })
+})
+
+//删除
+router.post('/delete',(req,res)=>{
+  let advise=req.body.advise;
+  var query="delete from tab_advise where advise='"+advise+"' ";
+  connection.query(query,(err,results,fields)=>{
+    if(err){
+      console.log(err);
+      return;
+    }
+    arr=results;
+     res.json({"data":1})
+  })
 })
 
 module.exports = router;

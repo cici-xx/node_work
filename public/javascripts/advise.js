@@ -36,8 +36,8 @@ $.ajax({
  $("#advise").delegate(".del_data","click",function(){
   $.ajax({
        type:"POST",
-       url:"/advise/content",
-       data:{"name":$(this).data("id")},
+       url:"/advise/delete",
+       data:{"advise":$(this).data("id")},
        success:function(data){
          if(data.data==1){
            window.location.href="/advise";
@@ -53,7 +53,7 @@ $.ajax({
       url:"/advise/content",
       data:{"advise":$("#recipient-name").val()},
       success:function(data){
-          alert("感谢您宝贵的意见！")
+          alert("反馈意见成功！")
   }
 })
 })

@@ -26,11 +26,7 @@ router.post('/login',(req,res) => {
           res.json({"status":1});
       }
   })  
-    // if( req.session.user!= undefined && name == req.session.user.username && pass == req.session.user.pass ){
-    //         res.send("login success")
-    //     }else{
-    //         res.end("login fail")
-    //     } 
+
 })
 
 module.exports = router;

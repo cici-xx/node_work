@@ -24,6 +24,7 @@ var bookmanagementRouter = require('./routes/bookmanagement');
 var alterRouter = require('./routes/bookmanagement');
 var updateRouter = require('./routes/bookmanagement');
 var adviseRouter = require('./routes/advise');
+var mybookrackRouter = require('./routes/mybookrack')
 
 
 
@@ -62,6 +63,7 @@ app.use('/bookmanagement',bookmanagementRouter);
 app.use('/alter',alterRouter);
 app.use('/update',updateRouter);
 app.use('/advise',adviseRouter);
+app.use('/mybookrack',mybookrackRouter);
 
 
 

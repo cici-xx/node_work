@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="/stylesheets/css2/bootstrap.css">
     <script src="/javascripts/jquery-3.6.0.js" > </script>
     <script src="/javascripts/js2/bootstrap.js"></script>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+      }
+    </style>
 </head>
 <body>
   
@@ -66,7 +72,6 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">设置</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/mybookrack">我的书架</a>
-            <!-- <a class="dropdown-item" href="/account">账号设置</a> -->
             <a class="dropdown-item" href="/">退出登录</a>
           </div>
         </li>
@@ -113,7 +118,7 @@
     </nav>
 
 
-    <div class="card-deck" id="card-deck">
+    <div  id="card-dec" style="display: flex;flex-direction: row;flex-wrap: wrap;flex: 1;width:1278px;">
     </div>
 </body>
 <script src="/javascripts/advise.js"></script>
@@ -124,16 +129,16 @@
     url :"/content/show",
     success:function(data){
       for (const i in data) {
-        $("#card-deck").append(`
+        $("#card-dec").append(`
         
-        <div class="card">
+        <div class="card" style="margin-left:20px;">
         <img src=${data[i].bimg} style="width: 18rem;" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${data[i].bname}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"></p>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <button type="button">借阅</button>
         </div>
       </div>
         `)

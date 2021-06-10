@@ -70,6 +70,15 @@ router.post('/content',(req,res) =>{
     })
   })
 
-  
+  router.post('/mybookrack_del',(req,res)=>{
+      var query = "delete from tab_userbook where bname='"+req.body.bname+"'" 
+      connection.query(query, (err,results,fields)=> {
+        if(err){
+          console.log(err);
+          return;
+        }
+        res.json({"status":1});
+    })
+  })
 
 module.exports = router;

@@ -84,13 +84,13 @@
           </ol>
         </nav>
 <!-- 展示卡片 -->
-        <div id="bookcard" style="display: flex;flex-direction: row;flex-wrap: wrap;flex: 1;width: 1278px;">
+        <div id="bookcard" style="display: flex;flex-direction: row;flex-wrap: wrap;flex: 1;width: 1307px;">
 
         </div>
 
         
 </body>
-
+<script src="/javascripts/mybookrack.js"></script>
 </html>
 <script>
   $.ajax({
@@ -110,7 +110,7 @@
               </div>
             </div>
           </div>
-          <button type="button" class="bookrack_del" data-i=${data[i].bname}>删除</button>
+          <button type="button" class="bookrack_del" data-i=${data[i].bname} data-d=${data[i].bimg}>移出书架</button>
         </div>
         `)
       }

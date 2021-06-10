@@ -9,3 +9,15 @@ $("#card-dec").delegate(".bookadd","click",function(){
     }
   })
   })
+  $("#bookcard").delegate(".bookrack_del","click",function(){
+    $.ajax({
+         type:"POST",
+         url:"/content/mybookrack_del",
+         data:{"bname":$(this).data("i"),"bimg":$(this).data("d")},
+         success:function(data){
+           if(data.status==1){
+             window.location.href="/mybookrack";
+         }
+     }
+   })
+   })

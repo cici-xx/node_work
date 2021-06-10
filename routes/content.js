@@ -44,4 +44,32 @@ router.post('/content',(req,res) =>{
     })
   })
 
+  router.post('/',(req,res)=>{
+
+      let bimg=req.body.bimg;
+      let bname=req.body.bname;
+      console.log(bname);
+      var query = 'insert tab_userbook(bname,bimg) values("'+bname+'","'+bimg+'")'
+      connection.query(query, (err,results,fields)=> {
+        if(err){
+          console.log(err);
+          return;
+        }
+        res.json({"status":1});
+      })
+  })
+
+  router.get('/mybookrack',(req,res)=>{
+      var query = 'select bimg,bname from tab_userbook'
+      connection.query(query, (err,results,fields)=> {
+        if(err){
+          console.log(err);
+          return;
+        }
+        res.json(results);
+    })
+  })
+
+  
+
 module.exports = router;

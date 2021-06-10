@@ -83,5 +83,39 @@
             <li class="breadcrumb-item active" aria-current="page">我的书架</li>
           </ol>
         </nav>
+<!-- 展示卡片 -->
+        <div id="bookcard" style="display: flex;flex-direction: row;flex-wrap: wrap;flex: 1;width: 1278px;">
+
+        </div>
+
+        
 </body>
+
 </html>
+<script>
+  $.ajax({
+    type:"GET",
+    url :"/content/mybookrack",
+    success:function(data){
+      for (const i in data) {
+        $("#bookcard").append(`
+        <div class="card mb-3" style="max-width: 435px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src=${data[i].bimg} style="width: 13rem; style="margin-left: 40px;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" style="margin-left: 88px;">${data[i].bname}</h5>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="bookrack_del" data-i=${data[i].bname}>删除</button>
+        </div>
+        `)
+      }
+
+    }
+  })
+</script>
+

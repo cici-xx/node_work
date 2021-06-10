@@ -68,19 +68,14 @@
 </div>
 
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">设置</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/mybookrack">我的书架</a>
-            <a class="dropdown-item" href="/">退出登录</a>
-          </div>
+        
+        <li class="nav-item">
+          <li><a class="nav-link" href="/mybookrack">我的书架</a></li>
+          <li><a class="nav-link" href="/" style="margin-left: 539px;">退出登录</a></li>
         </li>
+        
       </ul>
-      <!-- 搜索框连接数据库-->
-      <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
-        <input class="form-control mr-sm-2" type="search" placeholder="请输入书名或作者名称" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>
-      </form>
+      
     </div>
   </nav>
     <br>
@@ -122,6 +117,7 @@
     </div>
 </body>
 <script src="/javascripts/advise.js"></script>
+<script src="/javascripts/mybookrack.js"></script>
 </html>
 <script>
   $.ajax({
@@ -138,7 +134,7 @@
           <p class="card-text"></p>
         </div>
         <div class="card-footer">
-          <button type="button">借阅</button>
+          <button type="button" class="bookadd" data-id=${data[i].bname} data-img=${data[i].bimg}>添加</button>
         </div>
       </div>
         `)

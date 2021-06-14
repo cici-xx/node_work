@@ -55,6 +55,11 @@ var fn =  function(){
     })
     // 进行提交的时候
     $btn.click(function(){
+      if(!emailState,!realname,!phoneState,!passwordState,!repPassword){
+        alert("信息不能为空！")
+        return;
+
+      }
       if(!emailState) {
         alert("请输入正确的Email地址")
         return;
@@ -194,23 +199,7 @@ var fn =  function(){
      // checkEmailAjax();
     }
   
-    // function checkEmailAjax(){
-    //   var email = $inputEmail.val()
-    //   $.ajax({
-    //     "type": "CHECKOUT",
-    //     "url": "/ck_email_regist",
-    //     "data":{
-    //       email: email
-    //     },
-    //     "success": function(data){
-    //       if(data.result.length > 0){
-    //         warnFun($inputEmail,"该Email已经被注册，请输入新的Email地址")
-    //       } else {
-    //         emailState = true;
-    //       }
-    //     }
-    //   })
-    // }
+    
   
     // 添加校验方法
     function warnFun(dom,value) {

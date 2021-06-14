@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="/stylesheets/Table.css">
     
 </head>
-<body>
+<body style="background-image: url(images/back2.jpg);">
     <!-- 头部 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 54px;height: 34px;" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg>
         <a class="navbar-brand" href="/admin_content">首页</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,13 +25,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">借阅管理</a>
+              <a class="nav-link" href="/bookmanagement" style="color: black;">图书管理</a>
+              <li><a class="nav-link" href="/advise" style="color: black;">意见管理</a></li>
+              <li><a class="nav-link" href="/admin_content" style="margin-left: 810px; color: black;">退出登录</a></li>
+              <ll><svg style="color:#0000009c;margin-top: 16px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+              </svg></ll>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bookmanagement">图书管理</a>
-              <li><a class="nav-link" href="/advise">意见管理</a></li>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </li>
-            
           </ul>
         </div>
       </nav>

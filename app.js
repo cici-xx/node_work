@@ -9,12 +9,10 @@ var session = require('express-session')
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var contentRouter = require('./routes/content');
-var sociologyRouter = require('./routes/sociology');
-var psychologyRouter = require('./routes/psychology');
 var economicsRouter = require('./routes/economics');
-var naturalscienceRouter = require('./routes/naturalscience');
+
 var historyRouter = require('./routes/history');
-var personalRouter = require('./routes/personal');
+
 var detailRouter = require('./routes/detail');
 var searchRouter = require('./routes/search');
 var adminRouter = require('./routes/admin');
@@ -48,12 +46,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', loginRouter);
 app.use('/register',registerRouter);
 app.use('/content',contentRouter);
-app.use('/sociology',sociologyRouter);
-app.use('/psychology',psychologyRouter);
+
+
 app.use('/economics',economicsRouter);
-app.use('/naturalscience',naturalscienceRouter);
+
 app.use('/history',historyRouter);
-app.use('/personal',personalRouter);
+
 app.use('/detail',detailRouter);
 app.use('/search',searchRouter);
 app.use('/admin',adminRouter);
